@@ -1,0 +1,40 @@
+/* Copyright RichInStyle.com. If you use this style sheet you must retain this message unaltered */
+
+ADDRESS, BLOCKQUOTE, BODY, CAPTION, CENTER, CODE, DD, DIR, DIV, DL, DT, FORM, LI, MENU, OL, P, PRE, TD, TH, TR, UL {font-family: Geneva, Helvetica, Arial, sans-serif;
+color: black}
+
+A:link {color: #288;  text-decoration: none }
+
+A:visited {color: #288;  text-decoration: none }
+
+A:active {color: #288;  text-decoration: none }
+
+A:hover {color: #288;
+  text-decoration: underline;
+  background-color: #8FF;
+}
+
+.data {
+  background-color:     #5f9ea0;
+}
+
+BODY {
+  background: #fff;
+  background-image: url("/images/turronet.gif");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin-left: 10%;
+  color: #3a4f38;
+}
+
+CODE, KBD, SAMP {font-family: sans-serif}
+
+H1, H2, H3, H4, H5, H6 {
+  color: #69a531;
+  font-family: sans-serif;
+  border-bottom: thin solid #3a4f38;
+}
+
+PRE {border-color: black;
+color: black;
+background: #ddd}

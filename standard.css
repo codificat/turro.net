@@ -1,0 +1,115 @@
+
+body {
+  background-color:	white;
+  color:		black;
+  margin:		0;
+}
+
+html, body, h1, h2, h3, h4, p, div, ul, li {
+  font-family:		Arial, Helvetica, sans-serif;
+}
+
+img {
+  border:	0;
+}
+
+.hidden {
+  display:	none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color:	#336333;
+}
+
+@media print {
+  h1, h2, h3,
+  h4, h5, h6    { page-break-after: avoid; page-break-inside: avoid }
+  blockquote, pre           { page-break-inside: avoid }
+  ul, ol, dl    { page-break-before: avoid }
+  #menu		{ display:	none; }
+  #contingut	{ margin-left:	5%; }
+  body { font-family:	serif; }
+}
+
+/*  Menu  */
+
+#menu {
+  background-color:	#fedf6d;
+  width:	15%;
+  font-size:	.8em;
+  float:	left;
+}
+
+#menu dl {
+  padding-bottom: 1em;
+  padding-top:	0;
+  margin:	0;
+}
+
+#menu p {
+  margin:	0;
+  padding:	0;
+}
+
+#menu dt {
+  margin-top:	1em;
+  margin-left:	.5em;
+  margin-right:	.5em;
+  border:	1px solid #d99939;
+  color:	#336333;
+  text-align:	center;
+}
+
+#menu dd {
+  margin: 	0 .5em;
+  padding-left:	1em;
+  background-color:	#d99939;
+}
+
+#logo {
+  text-align:	center;
+  margin-left:	20%;
+  margin-top:	2em;
+}
+
+.selected {
+  font-style:	italic;
+  color:	red;
+}
+
+/* Contingut */
+
+#contingut {
+  float:	right;
+  width:	83%;
+  margin:	0;
+}
+
+/* Peu */
+
+#peu {
+  border-top:	thin solid black;
+  clear:	both;
+  width:	98%;
+  font-size:	x-small;
+  padding-left:	2%;
+}
+
+#standards {
+  float:	right;
+}
+
+/* Diari */
+
+.diari .data {
+  float:	right;
+  font-size:	.8em;
+  font-style:	italic;
+  padding-left:	1em;
+  padding-right:	1em;
+  margin-top:	-2em;
+}
+
+.dia {
+  border-top:	1px dotted #d99939;
+}

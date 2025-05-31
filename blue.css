@@ -1,0 +1,22 @@
+body {
+  background-color: #AAAAFF;
+  color: black;
+  font-family: sans-serif;
+}
+
+a {
+  color: #11A;
+}
+
+h1, h2, h3 {
+  color: #11A;
+}
+
+.lang {
+  float: right;
+}
+
+.data {
+  background-color:     #11A;
+  color:		white;
+}

@@ -1,0 +1,21 @@
+/* Copyright RichInStyle.com. If you use this style sheet you must retain this message unaltered */
+
+ADDRESS, BLOCKQUOTE, BODY, CAPTION, CENTER, CODE, DD, DIR, DIV, DL, DT, FORM, LI, MENU, OL, P, PRE, TD, TH, TR, UL {font-family: Times, serif;
+color: black}
+
+.data {
+  background-color:     #5f9ea0;
+}
+
+BODY {
+  background: #fff;
+  background-image: url("/images/pi-bg.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #black;
+  font-family: Times, serif;
+}
+
+PRE {border-color: black;
+color: black;
+background: #ddd}
