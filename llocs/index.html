@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Llocs Ρ Π</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <link rel="stylesheet" href="map.css">
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+    <script src="leaflet.ajax.min.js"></script>
+  </head>
+
+  <body>
+    <div id="map"></div>
+    <script>
+      // Creating map options
+      var mapOptions = {
+          center: [41.637860, 2.361960],
+          zoom: 5
+      }
+      
+      // Creating a map object
+      var map = new L.map('map', mapOptions);
+      
+      // Creating a Layer object
+      var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: 'Map data &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+          maxZoom: 19,
+      });
+
+      var geojsonLayer = new L.GeoJSON.AJAX("llocs.geojson", {
+          // style: function (feature) {
+          //     return feature.properties.style;
+          // },
+          onEachFeature: function (feature, layer) {
+              // var s = document.createElement('div');
+              // // var b = document.createElement('b');
+              // // var d = document.createElement('p');
+              // b.textContent = feature.properties.name;
+              // // p.textContent = feature.properties.description;
+              // s.appendChild(b);
+              // // s.appendChild(p);
+              var s = '<b>' + feature.properties.name + '</b><br>';
+              s += feature.properties.description + '<ul>';
+              // console.log(feature.properties.acts);
+              feature.properties.acts.forEach(function(val,i) {
+                  // console.log(val);
+                  // s += '<li>' + val.date + ': ' + val.comment + '</li>';
+                  s += '<li>' + val.date + '</li>';
+              });
+              s += '</ul>';
+              // console.log(s);
+              layer.bindPopup(s);
+          }
+      });
+      geojsonLayer.addTo(map);
+      
+      // Adding layer to the map
+      map.addLayer(layer);
+      </script>
+  </body>
+  
+</html>
